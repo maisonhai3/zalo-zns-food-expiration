@@ -29,3 +29,7 @@
 .small {
   font-size: 0.75rem;
 }
+
+.Table {
+ backgroundColor: 'lightblue'; borderRadius: '10px'; padding: '10px' 
+}
