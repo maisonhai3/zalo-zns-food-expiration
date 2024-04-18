@@ -2,7 +2,13 @@ import './App.css';
 
 import React, { useState } from 'react';
 import './App.css';
-import Table from './table';
+import Table from 'react-bootstrap/Table';
+
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
+
+
+import FoodListTable from './table';
 
 let foodList = [
   {
@@ -24,7 +30,7 @@ let foodList = [
 
 function displayFoodListTable() {
   return (
-    <Table data={foodList} />
+    <FoodListTable data={foodList} />
   );
 }
 
@@ -109,7 +115,7 @@ function displayExpiringFoodTable() {
   return (
     <div>
       <h2>Expiring Food Today</h2>
-      <table style={{backgroundColor:"red"}}>
+      <Table striped bordered hover>
         <thead>
           <tr>
             <th>Food Name</th>
@@ -126,7 +132,7 @@ function displayExpiringFoodTable() {
             </tr>
           ))}
         </tbody>
-      </table>
+      </Table>
     </div>
   );
 }

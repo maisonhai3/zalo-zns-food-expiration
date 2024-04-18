@@ -1,8 +1,9 @@
 import React from 'react';
+import Table from 'react-bootstrap/Table';
 
-function Table({ data }) {
+function FoodListTable({ data }) {
     return (
-        <table style={{ backgroundColor: 'green' }}>
+        <Table striped bordered hover>
             <thead>
                 <tr>
                     <th>Food Name</th>
@@ -19,8 +20,8 @@ function Table({ data }) {
                     </tr>
                 ))}
             </tbody>
-        </table>
+        </Table>
     );
 }
 
-export default Table;
+export default FoodListTable;
